@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Patients Details";
+}
+
+<h2>Patients Details</h2> 
+<a href="@Url.Action("Create","patient")"> Add New Patient</a>
+<br/>
+<br/>
+ <table class=" table table-bordered table-striped">
+     <tr>
+         <th> Action </th>
+         <th> Sl.No </th>
+         <th> First Name </th>
+         <th>Sur Name </th>
+         <th>Date Of Birth </th>
+         <th> Gender </th>
+         <th> Phone </th>
+         <th> Transaction Id </th>
+         <th> Transaction Time </th>
+         <th> Patient Pass Number </th>
+         <th> Relative Name </th>
+         <th> Relationship </th>
+         <th>  Road # </th>
+         <th>  District </th>
+         <th>  Postal Code </th>
+         <th>  Gp Code </th>
+         <th> Gp Sur Name </th>
+         <th> Gp Mobile # </th>
+     </tr>
+     @for (int i = 0; i < Model.Rows.Count; i++)
+     {
+     <tr>
+         <td>
+             <a href="@Url.Action("Edit","patient", new {@id = Model.Rows[i][0] })">Edit</a> 
+             <a href="@Url.Action("Delete","patient", new {@id = Model.Rows[i][0] })">Delete</a>
+         </td>
+         <td>@Model.Rows[i][0]</td>
+         <td>@Model.Rows[i][2]</td>
+         <td>@Model.Rows[i][3]</td>
+         <td>@Model.Rows[i][4]</td>
+         <td>@Model.Rows[i][5]</td>
+         <td>@Model.Rows[i][6]</td>
+         <td>@Model.Rows[i][7]</td>
+         <td>@Model.Rows[i][8]</td>
+         <td>@Model.Rows[i][1]</td>
+         <td>@Model.Rows[i][11]</td>
+         <td>@Model.Rows[i][12]</td>
+         <td>@Model.Rows[i][13]</td>
+         <td>@Model.Rows[i][16]</td>
+         <td>@Model.Rows[i][17]</td>
+         <td>@Model.Rows[i][20]</td>
+         <td>@Model.Rows[i][21]</td>
+         <td>@Model.Rows[i][23]</td>
+
+     </tr>
+     }
+ </table>

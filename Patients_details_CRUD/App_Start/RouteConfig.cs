@@ -16,7 +16,7 @@ namespace Patients_details_CRUD
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "patient", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
